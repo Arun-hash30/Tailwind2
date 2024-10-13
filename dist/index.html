@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Arun's Portfolio</title>
+    <link rel="stylesheet" href="../src/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="icon" href="../images/icon.jpg">
+</head>
+
+<body class="bg-gradient-to-b from-green-200 via-white to-green-200 max-w-screen-xl mx-auto sm:px-16">
+
+    <header class="bg-green-800 text-white py-4 navbar fixed top-0 left-0 w-full shadow z-50 transition-colors duration-300 mb-12">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-3xl font-bold ml-12">Arun's Portfolio</h1>
+            <nav class="space-x-4 hidden md:flex">
+                <a href="#about" class="hover:text-yellow-400 px-3 py-2 rounded">About</a>
+                <a href="#projects" class="hover:text-yellow-400 px-3 py-2 rounded">Projects</a>
+                <a href="#skills" class="hover:text-yellow-400 px-3 py-2 rounded">Skills</a>
+                <a href="#contact" class="hover:text-yellow-400 px-3 py-2 rounded">Contact</a>
+            </nav>
+            <button id="menu-toggle" class="md:hidden p-2 rounded focus:outline-none">
+                <i class="fas fa-bars text-white"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-green-800 absolute top-16 left-0 right-0 z-50">
+        <nav class="flex flex-col">
+            <a href="#about" class="hover:text-yellow-400 px-4 py-2">About</a>
+            <a href="#projects" class="hover:text-yellow-400 px-4 py-2">Projects</a>
+            <a href="#skills" class="hover:text-yellow-400 px-4 py-2">Skills</a>
+            <a href="#contact" class="hover:text-yellow-400 px-4 py-2">Contact</a>
+        </nav>
+    </div>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white mt-12">
+        <div class="container mx-auto text-center">
+            <img src="../images/profile.jpg" alt="Profile" class="rounded-full mx-auto w-40 mb-4 border-4 border-green-500 shadow-lg">
+            <h2 class="text-3xl font-bold mb-4 text-green-800">About Me</h2>
+            <p class="text-gray-700 max-w-lg mx-auto mb-8">I am a full-stack developer with over 4 years of experience in creating dynamic, responsive, and modern web applications using technologies like React, Spring Boot, and Tailwind CSS.</p>
+            <div class="grid grid-cols-1 gap-8 mt-8">
+                <!-- Card 1: Who I Am -->
+                <div class="flex flex-col sm:flex-row bg-white p-8 rounded-lg shadow-lg transform hover:scale-105 transition-transform">
+                    <div class="flex-1 text-left pr-4">
+                        <h3 class="text-lg font-bold text-green-600 mb-2">Who I Am</h3>
+                        <p class="text-gray-600">I am a passionate software developer who loves to code and creatively solve problems. With a deep interest in technology, I constantly seek to learn new programming languages and frameworks. I believe in writing clean, efficient code and collaborating with teams to build impactful software solutions.</p>
+                    </div>
+                    <img src="../images/who_am_i.jpg" alt="Who I Am" class="rounded-lg h-80 w-80 object-cover mt-4 sm:mt-0 sm:ml-4">
+                </div>
+                <!-- Card 2: My Mission -->
+                <div class="flex flex-col sm:flex-row bg-white p-8 rounded-lg shadow-lg transform hover:scale-105 transition-transform">
+                    <div class="flex-1 text-left pr-4">
+                        <h3 class="text-lg font-bold text-green-600 mb-2">My Mission</h3>
+                        <p class="text-gray-600">My mission is to build efficient, scalable, and impactful web solutions that help businesses grow and innovate. I strive to combine technology with creativity to create user-centric applications that solve real-world problems and enhance user experiences.</p>
+                    </div>
+                    <img src="../images/my_mission.webp" alt="My Mission" class="rounded-lg h-80 w-80 object-cover mt-4 sm:mt-0 sm:ml-4">
+                </div>
+                <!-- Card 3: Fun Fact -->
+                <div class="flex flex-col sm:flex-row bg-white p-8 rounded-lg shadow-lg transform hover:scale-105 transition-transform">
+                    <div class="flex-1 text-left pr-4">
+                        <h3 class="text-lg font-bold text-green-600 mb-2">Fun Fact</h3>
+                        <p class="text-gray-600">In my free time, I love hiking and exploring nature. This not only helps me stay inspired and refreshed but also allows me to disconnect from the digital world and appreciate the beauty around me. Nature fuels my creativity and motivates me to tackle new challenges in my projects.</p>
+                    </div>
+                    <img src="../images/fun_fact.webp" alt="Fun Fact" class="rounded-lg h-80 w-80 object-cover mt-4 sm:mt-0 sm:ml-4">
+                </div>
+            </div>
+        </div>
+    </section>
+
+ <!-- Projects Section -->
+<section id="projects" class="py-20 bg-gray-200">
+    <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-8 text-green-800">Projects</h2>
+        <div class="grid grid-cols-1 gap-8">
+            <!-- Project 1 -->
+            <div class="bg-white p-8 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+                <div class="text-left mb-14">
+                    <h3 class="font-bold text-xl mb-2 text-indigo-600">Hotel Reservation System</h3>
+                    <p class="text-gray-600 mb-4">The Online Hotel Booking System (OHBS) is a comprehensive web-based application designed to streamline the process of hotel booking for customers and hotel management. This system provides an efficient platform for users to search for hotels, view room availability, make bookings, and manage reservations online.</p>
+                    <div class="flex">
+                        <a href="https://github.com/Arun-hash30/OnlineHotelBookingManagementSystem" class="text-indigo-600 font-bold hover:underline">View Case Study (see On GitHub)</a>
+                    </div>
+                </div>
+                <img src="../images/project1.png" alt="Project 1" class="rounded-lg h-96 w-full object-cover mt-6"> <!-- Increased size and added margin -->
+            </div>
+
+            <!-- Project 2 -->
+            <div class="bg-white p-8 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+                <div class="text-left mb-14">
+                    <h3 class="font-bold text-xl mb-2 text-indigo-600">Health Insurance System</h3>
+                    <p class="text-gray-600 mb-4">The Online Health Insurance Management System (OHIMS) is a web-based application developed using Spring Boot, aimed at automating health insurance management processes. It features user management, policy management, claim submissions, and document handling.</p>
+                    <div class="flex">
+                        <a href="https://github.com/Arun-hash30/OnlineHealthInsurenceManagementSystem" class="text-indigo-600 font-bold hover:underline">View Case Study (see On GitHub)</a>
+                    </div>
+                </div>
+                <img src="../images/project2.jpg" alt="Project 2" class="rounded-lg h-96 w-full object-cover mt-6"> <!-- Increased size and added margin -->
+            </div>
+
+            <!-- Project 3 -->
+            <div class="bg-white p-8 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+                <div class="text-left mb-14">
+                    <h3 class="font-bold text-xl mb-2 text-indigo-600">Airline Reservation System</h3>
+                    <p class="text-gray-600 mb-4">The Airline Reservation System is a comprehensive web application designed to facilitate flight bookings, user management, and flight management in a streamlined and efficient manner. This system aims to provide a user-friendly interface for customers to book flights easily while allowing administrators to manage users, flights, and bookings effectively.</p>
+                    <div class="flex">
+                        <a href="#" class="text-indigo-600 font-bold hover:underline">View Case Study (see On GitHub)</a>
+                    </div>
+                </div>
+                <img src="../images/project3.png" alt="Project 3" class="rounded-lg h-96 w-full object-cover mt-6"> <!-- Increased size and added margin -->
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-8 text-green-800">Skills</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform">
+                    <h3 class="text-lg font-bold text-green-600 mb-4">JavaScript</h3>
+                    <p class="text-gray-600">Expertise in JavaScript, including ES6+ features, and experience with libraries such as React.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform">
+                    <h3 class="text-lg font-bold text-green-600 mb-4">React</h3>
+                    <p class="text-gray-600">Proficient in building dynamic single-page applications using React and its ecosystem.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform">
+                    <h3 class="text-lg font-bold text-green-600 mb-4">Spring Boot</h3>
+                    <p class="text-gray-600">Strong experience in developing RESTful APIs and microservices using Spring Boot.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform">
+                    <h3 class="text-lg font-bold text-green-600 mb-4">Tailwind CSS</h3>
+                    <p class="text-gray-600">Skilled in using Tailwind CSS to create responsive and visually appealing UI components.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform">
+                    <h3 class="text-lg font-bold text-green-600 mb-4">HTML & CSS</h3>
+                    <p class="text-gray-600">Strong understanding of HTML5 and CSS3, with experience in creating accessible web pages.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform">
+                    <h3 class="text-lg font-bold text-green-600 mb-4">Node.js</h3>
+                    <p class="text-gray-600">Experience in building back-end applications using Node.js and Express.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform">
+                    <h3 class="text-lg font-bold text-green-600 mb-4">MongoDB</h3>
+                    <p class="text-gray-600">Proficient in using MongoDB for database management in web applications.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform">
+                    <h3 class="text-lg font-bold text-green-600 mb-4">Git & GitHub</h3>
+                    <p class="text-gray-600">Familiar with version control using Git and collaboration on GitHub.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-200">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-8 text-green-800">Contact Me</h2>
+            <p class="text-gray-600 mb-4">Feel free to reach out if you have any questions or would like to discuss potential projects!</p>
+            <div class="flex justify-center mb-4">
+                <a href="mailto:arunravikanth123@gmail.com" class="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-500 transition duration-300">Email Me</a>
+            </div>
+            <p class="text-gray-600">Connect with me on <a href="https://www.linkedin.com/in/arunravikanth/" class="text-indigo-600 hover:underline">LinkedIn</a></p>
+            <p class="text-gray-600">GitHub: <a href="https://github.com/Arun-hash30" class="text-indigo-600 hover:underline">Arun-hash30</a></p>
+        </div>
+    </section>
+
+    <footer class="bg-green-800 text-white py-4 text-center">
+        <p>&copy; 2024 Arun Ravikanth. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
